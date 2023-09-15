@@ -1,0 +1,28 @@
+﻿@model Birthdate
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<<h1>Future Value Calculator</h1>
+
+<form asp-controller="Home" method="post">
+
+    <div class="form-group">
+
+        <label for="BirthDate">Enter your birthdate:</label>
+
+
+
+        <input type="date" class="form-control" id="BirthDate" name="BirthDate" asp-for="BirthDate" required>
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Calculate</button>
+
+</form>
+
+
+
+
+
+
