@@ -5,7 +5,7 @@ namespace UnitProject2.Controllers
 {
     public class AgeCalculatorController : Controller
     {
-       // [HttpGet]
+        [HttpGet]
         public IActionResult Index()
         {
             return View();  

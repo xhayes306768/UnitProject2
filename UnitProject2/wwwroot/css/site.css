@@ -1,16 +1,22 @@
-html {
-  font-size: 14px;
+body {
+    margin-top:0;
+    padding: 2em;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
+h1 {
+    margin-top: 0;
+    color: navy;
   }
+
+label {
+    display: inline-block;
+    width: 10em;
+    padding-right: 1em;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+div {
+    margin-bottom: .5em;
 }
 
 body {

@@ -6,27 +6,29 @@ namespace UnitProject2.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        
+
+        // Here is our CalculateAge Method that handles the form submission,
+        //calculates age and displays the result in our Age result view
+
+        //If info is correct return age view, If not return the index
+        [HttpPost]
+        public IActionResult CalculateAge(Birthdate model)
         {
-            return View();
+            if (ModelState.IsValid)
+        {
+                int age = model.CalculateAge();
+                ViewBag.Age = age;
+                return View("AgeResult");
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View("Index", model);
         }
     }
 }
