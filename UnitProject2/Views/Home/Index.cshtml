@@ -1,60 +1,15 @@
 ﻿@model Birthdate
+
 @{
-    ViewData["Title"] = "𝒲𝐸𝐿𝒞𝒪𝑀𝐸 𝒯𝒪 𝒪𝒰𝑅";
+    ViewData["Title"] = "Age Calculator";
 }
 
-<link rel="stylesheet" href="site.css">
+<h1>Age Calculator Page</h1>
 
-<style>
-    /* Center the content */
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 1px;
-        background-color: #f0f0f0; /* Set background color */
-    }
-
-    /* Style the border rectangle */
-    .container {
-        border: 2px solid #000;
-        padding: 20px;
-        background-color: darkgray; /* Set background color inside the rectangle */
-        border-radius: 1px; /* Rounded corners */
-    }
-
-    h1 {
-        color: black;
-    }
-
-    /* Style the header */
-    h1 {
-        text-align: center;
-    }
-</style>
-
-
-<h1>𝔸𝕘𝕖 ℂ𝕒𝕝𝕔𝕦𝕝𝕒𝕥𝕠𝕣 ℙ𝕒𝕘𝕖</h1>
-
-<form asp-controller="Home" method="post">
-
+<form asp-controller="AgeCalculator" asp-action="CalculateAge" method="post">
     <div class="form-group">
-
         <label for="BirthDate">Enter your birthdate:</label>
-
-
-
         <input type="date" class="form-control" id="BirthDate" name="BirthDate" asp-for="BirthDate" required>
-
     </div>
-
     <button type="submit" class="btn btn-primary">Calculate</button>
-
 </form>
-
-
-
-
-
-

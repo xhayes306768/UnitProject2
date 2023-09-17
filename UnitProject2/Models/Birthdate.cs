@@ -1,23 +1,22 @@
-﻿namespace UnitProject2.Models
+﻿using System;
+
+namespace UnitProject2.Models
 {
     public class Birthdate
     {
-
         public DateTime BirthDate { get; set; }
-        public int Age => CalculateAge();
-
 
         public int CalculateAge()
         {
             var today = DateTime.Today;
             var age = today.Year - BirthDate.Year;
 
+            if (BirthDate.Date > today.AddYears(-age))
+            {
+                age--;
+            }
 
-            // If statement
-            if (BirthDate.Date > today.AddYears(-age)) age--;
             return age;
-
-
         }
     }
 }

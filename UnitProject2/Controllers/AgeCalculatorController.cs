@@ -5,12 +5,10 @@ namespace UnitProject2.Controllers
 {
     public class AgeCalculatorController : Controller
     {
-       // [HttpGet]
         public IActionResult Index()
         {
-            return View();  
+            return View();
         }
-
 
         [HttpPost]
         public IActionResult CalculateAge(Birthdate model)
