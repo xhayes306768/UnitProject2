@@ -11,7 +11,7 @@ namespace UnitProject2.Models
 
 
         public bool IsDateValid { get; private set; }
-        public string ErrorMessage { get; private set; }
+      
 
         public Birthdate()
         {
@@ -28,7 +28,7 @@ namespace UnitProject2.Models
             if (BirthDate > today)
             {
                 IsDateValid = false;
-                ErrorMessage = "Birthdate cannot be in the future.";
+                
                 return -1;  // Return -1 to indicate an invalid age
             }
 
