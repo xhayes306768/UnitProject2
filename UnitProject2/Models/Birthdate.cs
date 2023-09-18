@@ -1,5 +1,6 @@
 ﻿using System;
-
+// Author: Firaol and Xavier
+//For this Project We are doing  Age Calculator.  We enter the day, month, and years, the it display  how old you are
 namespace UnitProject2.Models
 {
     //  Birthdates class that holds the calulate age method
