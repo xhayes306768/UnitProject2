@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using UnitProject2.Models;
+// This is the controller that handles ouir get and post actions.
 
 namespace UnitProject2.Controllers
 {
@@ -22,11 +23,11 @@ namespace UnitProject2.Controllers
         public IActionResult CalculateAge(Birthdate model)
         {
             if (ModelState.IsValid)
-        {
+            {
                 int age = model.CalculateAge();
                 ViewBag.Age = age;
                 return View("AgeResult");
-        }
+            }
 
             return View("Index", model);
         }

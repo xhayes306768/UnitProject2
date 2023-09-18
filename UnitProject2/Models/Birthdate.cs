@@ -1,8 +1,10 @@
 ﻿namespace UnitProject2.Models
 {
+    //  Birthdates class that holds the calulate age method
+    //  and does input validation the the age.
     public class Birthdate
     {
-
+        
         public DateTime BirthDate { get; set; }
         public int Age => CalculateAge();
 
