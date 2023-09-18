@@ -1,28 +1,18 @@
 ﻿@model Birthdate
+
 @{
     ViewData["Title"] = "Age Calculator";
 }
 
-<h1></h1>
+<h1>Age Calculator Page</h1>
 
 <form asp-controller="Home" asp-action="CalculateAge" method="post">
 
     <div class="form-group">
-
         <label for="BirthDate">Enter your birthdate:</label>
-
-
-
         <input type="date" class="form-control" id="BirthDate" name="BirthDate" asp-for="BirthDate" required>
-
     </div>
 
     <button type="submit" class="btn btn-primary">Calculate</button> <a asp-action="Index">Clear</a>
 
 </form>
-
-
-
-
-
-

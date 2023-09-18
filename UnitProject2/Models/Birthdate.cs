@@ -1,4 +1,6 @@
-﻿namespace UnitProject2.Models
+﻿using System;
+
+namespace UnitProject2.Models
 {
     //  Birthdates class that holds the calulate age method
     //  and does input validation the the age.
@@ -6,7 +8,6 @@
     {
         
         public DateTime BirthDate { get; set; }
-        public int Age => CalculateAge();
 
 
         public bool IsDateValid { get; private set; }
@@ -34,6 +35,10 @@
 
             var age = today.Year - BirthDate.Year;
 
+            if (BirthDate.Date > today.AddYears(-age))
+            {
+                age--;
+            }
 
             //  This checks if the birthdate in the current year has passed.
             //  If it hasn't, it decrements the calculated age by 1
